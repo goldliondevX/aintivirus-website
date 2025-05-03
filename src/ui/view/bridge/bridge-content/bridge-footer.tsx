@@ -110,35 +110,35 @@ const BridgeFooter: FC = () => {
           </div>
 
           <div className="text-center md:text-left mb-8 md:mb-0 py-4">
-            <ul className="md:grid md:grid-flow-col md:grid-rows-4 flex flex-col gap-x-6 gap-y-4 md:gap-y-1 text-gray-500 text-lg md:text-sm">
-              <li>
-                <h3 className="text-cyan-400 font-semibold">Links</h3>
-              </li>
-              <li>
+            <h3 className="text-cyan-400 font-semibold text-lg md:text-sm pb-3">
+              Links
+            </h3>
+            <ul className="md:grid md:grid-flow-col md:grid-rows-4 flex flex-col  gap-x-6 gap-y-6 md:gap-y-3 text-gray-500 text-lg md:text-sm">
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://aintivirus.ai/tradein">Bridge</Link>
               </li>
-              <li>
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://esim.aintivirus.ai/">
                   Gift Card / E Sim
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://store.aintivirus.ai/">Merch</Link>
               </li>
-              <li>
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://aintivirus.ai/tradein">Sell Phones</Link>
               </li>
-              <li>
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://mixer.aintivirus.ai/">
                   Cross Chain Mixer
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-primary transition-colors">
                 <Link href="https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk ">
                   Dao
                 </Link>
               </li>
-              <li>Blog</li>
+              <li className="hover:text-primary transition-colors">Blog</li>
             </ul>
           </div>
 

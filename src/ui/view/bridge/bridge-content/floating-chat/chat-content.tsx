@@ -97,7 +97,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
             <input
               type="text"
               placeholder="Reply..."
-              className="flex-1 bg-transparent border-none outline-none py-2 text-white placeholder-gray-400"
+              className="flex-1 w-32 bg-transparent border-none outline-none py-2 text-white placeholder-gray-400"
             />
           </div>
 
