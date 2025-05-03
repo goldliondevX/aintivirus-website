@@ -40,7 +40,7 @@ const Message: FC<MessageProps> = ({ message, isSender }) => {
         )}
         <div
           className={cn(
-            'max-w-sm ms-0 rounded-lg p-3 ml-10',
+            'max-w-xs ms-0 rounded-lg p-3 ml-10',
             isSender ? 'bg-transparent' : 'bg-purple'
           )}
         >
