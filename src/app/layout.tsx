@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ReactNode } from 'react';
 import { cn } from '@/utils/style-utils';
-import { dotGothic16, inter } from '@/lib/fonts';
+import { dmSans, dotGothic16, inter, poppins } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.variable, dotGothic16.variable)}>
+      <body
+        className={cn(
+          inter.variable,
+          dotGothic16.variable,
+          poppins.variable,
+          dmSans.variable
+        )}
+      >
         {children}
       </body>
     </html>

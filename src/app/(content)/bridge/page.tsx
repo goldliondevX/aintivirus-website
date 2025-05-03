@@ -1,9 +1,9 @@
-import Navbar from '@/ui/elements/navbar';
+import BridgeContent from '@/ui/view/bridge/bridge-content';
 
 export default function BridgePage() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <>
+      <BridgeContent />
+    </>
   );
 }
