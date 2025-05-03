@@ -1,16 +1,88 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+// @ts-check
+import eslint from '@eslint/js';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import unusedImports from 'eslint-plugin-unused-imports';
+import importPlugin from 'eslint-plugin-import';
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default tseslint.config(
+    {
+      ignores: ['eslint.config.mjs'],
+    },
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+    eslint.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked,
+    eslintPluginPrettierRecommended,
 
-export default eslintConfig;
+    {
+      plugins: {
+        'unused-imports': unusedImports,
+        import: importPlugin,
+      },
+
+      languageOptions: {
+        globals: {
+          ...globals.node,
+          ...globals.jest,
+        },
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: import.meta.dirname,
+        },
+      },
+
+      rules: {
+        'no-console': 'off',
+        'prettier/prettier': 'warn',
+
+
+        '@typescript-eslint/no-wrapper-object-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'warn',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'after-used',
+            ignoreRestSiblings: false,
+            argsIgnorePattern: '^_.*?$',
+          },
+        ],
+
+        'no-unused-vars': 'off',
+        'unused-imports/no-unused-vars': 'off',
+        'unused-imports/no-unused-imports': 'warn',
+
+        'import/order': [
+          'warn',
+          {
+            groups: ['type', 'builtin', 'object', 'external', 'internal', 'parent', 'sibling', 'index'],
+            pathGroups: [
+              {
+                pattern: '~/**',
+                group: 'external',
+                position: 'after',
+              },
+            ],
+            'newlines-between': 'always',
+          },
+        ],
+
+        'padding-line-between-statements': [
+          'warn',
+          { blankLine: 'always', prev: '*', next: 'return' },
+          { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+          {
+            blankLine: 'any',
+            prev: ['const', 'let', 'var'],
+            next: ['const', 'let', 'var'],
+          },
+        ],
+      },
+    }
+);
