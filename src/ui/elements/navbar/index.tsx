@@ -44,7 +44,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               className="text-xl focus:outline-none text-primary"
@@ -57,7 +57,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <ul className="hidden md:flex md:space-x-6 text-sm font-semibold">
+          <ul className="hidden lg:flex md:space-x-6 text-sm font-semibold">
             {menuItems.map((item, idx) => (
               <li key={idx}>
                 <Link
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       <div
         className={cn(
-          'fixed top-0 right-0 h-full w-full bg-black z-40 transform transition-transform duration-300 ease-in-out md:hidden',
+          'fixed top-0 right-0 h-full w-full md:w-64 bg-black z-40 transform transition-transform duration-300 ease-in-out lg:hidden',
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >

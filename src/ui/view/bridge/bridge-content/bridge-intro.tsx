@@ -4,6 +4,7 @@ import TransparentCard from '@/ui/elements/card/transparent-card';
 import SolanaIcon from '@/ui/components/icons/solana';
 import EthereumIcon from '@/ui/components/icons/ethereum';
 import { ArrowRightIcon } from '@/ui/components/icons/arrow';
+import Link from 'next/link';
 
 const BridgeIntro: FC = () => {
   return (
@@ -43,9 +44,12 @@ const BridgeIntro: FC = () => {
               <p>
                 <span className="text-primary font-medium">Solana (Main)</span>{' '}
                 –
-                <span className="ml-1 text-gray-300 break-all">
+                <Link
+                  href="https://solscan.io/account/BAezfVmia8UYLt4rst6PCU4dvL2i2qHzqn4wGhytpNJW"
+                  className="ml-1 text-gray-300 break-all hover:text-primary transition-colors"
+                >
                   BAezfVmia8UYLt4rst6PCU4dvL2i2qHzqn4wGhytpNJW
-                </span>
+                </Link>
               </p>
             </div>
 
@@ -53,9 +57,12 @@ const BridgeIntro: FC = () => {
               <EthereumIcon />
               <p>
                 <span className="text-primary font-medium">Ethereum</span> –
-                <span className="ml-1 text-gray-300 break-all">
+                <Link
+                  href="https://etherscan.io/address/0x686c5961370Db7F14F57f5a430e05DeaE64df504"
+                  className="ml-1 text-gray-300 break-all hover:text-primary transition-colors"
+                >
                   0x686c5961370db7f14f57f5a430e05deae64df504
-                </span>
+                </Link>
               </p>
             </div>
           </div>

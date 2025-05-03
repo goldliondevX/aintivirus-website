@@ -9,11 +9,24 @@ import MediumIcon from '@/ui/components/icons/medium';
 import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
 
+const links = [
+  { name: 'Bridge', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Gift Card / E Sim', href: 'https://esim.aintivirus.ai/' },
+  { name: 'Merch', href: 'https://store.aintivirus.ai/' },
+  { name: 'Sell Phones', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Cross Chain Mixer', href: 'https://mixer.aintivirus.ai/' },
+  {
+    name: 'Dao',
+    href: 'https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk',
+  },
+  { name: 'Blog', href: '#' },
+];
+
 const BridgeFooter: FC = () => {
   return (
-    <footer className="w-full text-white py-10 px-6 sm:px-16">
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-center">
-        <div className="space-y-6 mb-8 md:mb-0">
+    <footer className="w-full text-white py-10 px-6 sm:px-12">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center">
+        <div className="space-y-6 mb-8 lg:mb-0">
           <Image
             src="/images/logo.png"
             alt="Aintivirus Logo"
@@ -22,12 +35,12 @@ const BridgeFooter: FC = () => {
             className="mb-2"
           />
 
-          <p className="font-xl font-dmsans text-white/70">
+          <p className="font-xl font-dmsans max-w-72 lg:max-w-96 text-white/70">
             Promoting the ideas and legacy of{' '}
             <span className="font-semibold">John McAfee</span>
           </p>
 
-          <div className="gap-3 mt-4 hidden md:flex">
+          <div className="gap-3 mt-4 hidden lg:flex">
             <Link
               className="contents"
               href="https://www.youtube.com/@AIntivirusPodcast"
@@ -68,8 +81,8 @@ const BridgeFooter: FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center space-x-8">
-          <div className="flex gap-3 mt-4 md:hidden">
+        <div className="flex flex-col-reverse lg:flex-row items-center space-x-8">
+          <div className="flex gap-3 mt-4 lg:hidden">
             <Link
               className="contents"
               href="https://www.youtube.com/@AIntivirusPodcast"
@@ -109,36 +122,19 @@ const BridgeFooter: FC = () => {
             </Link>
           </div>
 
-          <div className="text-center md:text-left mb-8 md:mb-0 py-4">
-            <h3 className="text-cyan-400 font-semibold text-lg md:text-sm pb-3">
+          <div className="text-center lg:text-left mb-8 lg:mb-0 py-4 !ms-2">
+            <h3 className="text-cyan-400 font-semibold text-2xl lg:text-sm pb-5 lg:pb-3">
               Links
             </h3>
-            <ul className="md:grid md:grid-flow-col md:grid-rows-4 flex flex-col  gap-x-6 gap-y-6 md:gap-y-3 text-gray-500 text-lg md:text-sm">
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://aintivirus.ai/tradein">Bridge</Link>
-              </li>
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://esim.aintivirus.ai/">
-                  Gift Card / E Sim
-                </Link>
-              </li>
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://store.aintivirus.ai/">Merch</Link>
-              </li>
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://aintivirus.ai/tradein">Sell Phones</Link>
-              </li>
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://mixer.aintivirus.ai/">
-                  Cross Chain Mixer
-                </Link>
-              </li>
-              <li className="hover:text-primary transition-colors">
-                <Link href="https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk ">
-                  Dao
-                </Link>
-              </li>
-              <li className="hover:text-primary transition-colors">Blog</li>
+            <ul className="lg:grid lg:grid-flow-col lg:grid-rows-4 flex flex-col gap-x-6 gap-y-6 lg:gap-y-3 text-gray-500 text-lg lg:text-sm">
+              {links.map((link, i) => (
+                <li
+                  key={i}
+                  className="hover:text-primary transition-colors whitespace-nowrap"
+                >
+                  <Link href={link.href}>{link.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -148,7 +144,7 @@ const BridgeFooter: FC = () => {
               alt="John McAfee NFT Grid"
               width={300}
               height={300}
-              className="object-contain rounded-lg"
+              className="object-contain rounded-lg lg:w-72 lg:h-72"
             />
           </div>
         </div>
