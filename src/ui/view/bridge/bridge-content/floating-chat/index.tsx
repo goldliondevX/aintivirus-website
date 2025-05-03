@@ -70,7 +70,7 @@ const FloatingChat: FC = () => {
 
       {isVisible && (
         <div className="fixed inset-0 rounded-lg flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="w-full max-w-lg h-[50rem] flex flex-col bg-tertiary text-white rounded-lg overflow-hidden shadow-xl transform transition-all">
+          <div className="w-full w-screen h-screen lg:max-w-lg lg:h-[50rem] flex flex-col bg-tertiary text-white rounded-lg overflow-hidden shadow-xl transform transition-all">
             <div className="flex items-center justify-between p-4 border-b border-blue-800">
               <div className="flex items-center space-x-3">
                 <div className="relative">
@@ -88,7 +88,7 @@ const FloatingChat: FC = () => {
               </div>
               <button
                 onClick={toggleModal}
-                className="p-2 rounded-full bg-gray-500/50 hover:bg-gray-500/30 transition-opacity"
+                className="p-1 rounded-full bg-gray-500/50 hover:bg-gray-500/30 transition-opacity"
               >
                 <CloseIcon />
               </button>

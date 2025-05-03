@@ -1,8 +1,14 @@
+'use client';
 import { FC } from 'react';
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import Carousel from '@/ui/elements/carousel';
+import useMobile from '@/hooks/use-mobile';
 
 const BridgeNftCollections: FC = () => {
+  const { isMobile } = useMobile();
+
+  const carouselVisibleCount = isMobile ? 3 : 5;
+
   return (
     <div className="w-full gap-2 h-full pt-16 flex flex-col relative items-center">
       <TransparentCard className="text-primary w-fit rounded-full py-1 font-bold px-4">
@@ -19,7 +25,8 @@ const BridgeNftCollections: FC = () => {
       </h2>
 
       <Carousel
-        className=" h-[35rem]"
+        visibleCount={carouselVisibleCount}
+        className="h-[20rem] lg:h-[35rem]"
         images={[
           '/images/nft/nft-1.jpg',
           '/images/nft/nft-2.jpg',
@@ -29,7 +36,7 @@ const BridgeNftCollections: FC = () => {
         ]}
       />
 
-      <p className="absolute bottom-28 left-1/2 -translate-x-1/2 max-w-[22.5rem] mx-auto font-inter text-sm text-center mt-6">
+      <p className="absolute bottom-14 text-gray-400 lg:bottom-28 left-1/2 -translate-x-1/2 w-[90%] lg:max-w-[22.5rem] mx-auto font-inter text-sm text-center mt-6">
         Save on fees, get access to a never before seen John McAfee pics and
         videos, and more, with the AIntivirus NFTs!
       </p>

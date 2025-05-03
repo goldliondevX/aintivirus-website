@@ -1,7 +1,8 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { cn } from '@/utils/style-utils';
 import Image from 'next/image';
+import useMobile from "@/hooks/use-mobile";
 
 const VISIBLE_COUNT = 5;
 
@@ -22,6 +23,9 @@ const Carousel: FC<CarouselProps> = ({
   const handleImageClick = (index: number) => {
     setCurrent(index);
   };
+
+  const { isMobile } = useMobile();
+
   const maxOffset = Math.floor(visibleCount / 2);
 
   return (
@@ -45,23 +49,23 @@ const Carousel: FC<CarouselProps> = ({
           const zIndex = 20 - absOffset;
           const opacity = 1 - absOffset * 0.2;
           const scale = 1 - absOffset * 0.1;
-          const topOffset = absOffset * 130;
+          const leftOffset = offset * (isMobile ? 120 : 180);
+          const topOffset = absOffset * (isMobile ? 60 : 130);
 
           return (
             <div
               key={i}
               onClick={() => handleImageClick(i)}
               className={cn(
-                'transition-all duration-500 ease-in-out cursor-pointer  border-2 border-transparent absolute',
+                'transition-all duration-500 ease-in-out cursor-pointer border-2 border-transparent absolute',
+                'lg:left-[32%] left-[25%]',
                 offset === 0 &&
-                  'bg-black p-3 rounded-xl border-primary shadow-[0_0_20px_theme(colors.primary)]'
+                  'bg-black p-1 lg:p-3 rounded-xl border-primary shadow-[0_0_20px_theme(colors.primary)]'
               )}
               style={{
-                transform: `translateX(${offset * 180}px) scale(${scale})`,
+                transform: `translateX(${leftOffset}px) translateY(${topOffset}px) scale(${scale})`,
                 opacity,
-                top: `${topOffset}px`,
                 zIndex,
-                left: '32%',
                 transformOrigin: 'center center',
               }}
             >
@@ -70,7 +74,7 @@ const Carousel: FC<CarouselProps> = ({
                 alt={`NFT ${i + 1}`}
                 width={380}
                 height={480}
-                className="rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl"
+                className="rounded-xl w-40 lg:w-96 shadow-lg transition-all duration-500 hover:shadow-xl"
                 priority={absOffset < 2}
               />
             </div>

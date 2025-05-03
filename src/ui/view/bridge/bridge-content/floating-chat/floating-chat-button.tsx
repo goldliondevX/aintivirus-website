@@ -15,7 +15,7 @@ const FloatingChatButton: FC<FloatingChatButtonProps> = ({ ...props }) => {
           alt="John McAfee"
           width={80}
           height={80}
-          className="rounded-full"
+          className="rounded-full w-16 lg:w-20"
         />
       </div>
     </button>
