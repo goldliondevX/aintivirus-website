@@ -51,7 +51,7 @@ const FloatingChat: FC = () => {
               transformOrigin: 'bottom right',
             }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-            className="fixed bottom-6 right-6 z-50"
+            className="fixed md:bottom-6 right-0 md:right-6 z-50"
           >
             <ChatContent toggleModal={toggleModal} />
           </motion.div>

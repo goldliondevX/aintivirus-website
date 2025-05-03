@@ -40,7 +40,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="md:hidden flex items-center y">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               className="text-xl focus:outline-none text-primary"
@@ -53,17 +53,13 @@ const Navbar = () => {
             </button>
           </div>
 
-          <ul
-            className={`md:flex md:space-x-6 text-sm space-y-4 md:space-y-0 absolute md:static bg-black md:bg-transparent w-full md:w-auto transition-all duration-300 md:flex-row ${
-              isMobileMenuOpen ? 'top-16 left-0 p-4' : 'hidden'
-            }`}
-          >
+          <ul className="hidden md:flex md:space-x-6 text-sm font-semibold">
             {menuItems.map((item, idx) => (
               <li key={idx}>
                 <Link
                   href={item.href}
                   className={cn(
-                    'hover:text-cyan-400 transition-colors font-semibold',
+                    'hover:text-cyan-400 transition-colors',
                     pathname.includes(item.href) && 'text-cyan-400 font-bold'
                   )}
                 >
@@ -74,6 +70,31 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
+      <div
+        className={cn(
+          'fixed top-0 right-0 h-full w-full bg-black z-40 transform transition-transform duration-300 ease-in-out md:hidden',
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        )}
+      >
+        <ul className="flex flex-col mt-24 space-y-6 px-6 text-white font-semibold">
+          {menuItems.map((item, idx) => (
+            <li key={idx}>
+              <Link
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  'hover:text-cyan-400 transition-colors',
+                  pathname.includes(item.href) && 'text-cyan-400 font-bold'
+                )}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div className="h-[100px] md:h-[150px]" />
     </>
   );

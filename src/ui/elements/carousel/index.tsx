@@ -24,7 +24,7 @@ const Carousel: FC<CarouselProps> = ({
     setCurrent(index);
   };
 
-  const { isMedium, isLarge } = useBreakpoints();
+  const { isMedium, isLarge, width } = useBreakpoints();
 
   const maxOffset = Math.floor(visibleCount / 2);
 
@@ -49,20 +49,9 @@ const Carousel: FC<CarouselProps> = ({
           const zIndex = 20 - absOffset;
           const opacity = 1 - absOffset * 0.2;
           const scale = 1 - absOffset * 0.1;
-          const leftOffset = offset * (!isMedium ? 120 : 180);
+          const leftOffset = offset * (!isMedium ? 120 : 180) - (!isMedium ? 110 : 200);
           const topOffset = absOffset * (!isMedium ? 60 : 130);
 
-          const getLeftOffset = () => {
-            console.log(isLarge, isMedium)
-            if (isLarge) {
-              return `33%`;
-            }
-            if (isMedium) {
-              return `calc(27%)`;
-            }
-
-            return `35%`
-          };
 
           return (
             <div
@@ -70,12 +59,11 @@ const Carousel: FC<CarouselProps> = ({
               onClick={() => handleImageClick(i)}
               className={cn(
                 'transition-all duration-500 ease-in-out cursor-pointer border-2 border-transparent absolute',
-                // 'md:left-[32%] left-[25%]',
                 offset === 0 &&
                   'bg-black p-1 md:p-3 rounded-xl border-primary shadow-[0_0_20px_theme(colors.primary)]'
               )}
               style={{
-                left: getLeftOffset(),
+                left: "50%",
                 transform: `translateX(${leftOffset}px) translateY(${topOffset}px) scale(${scale})`,
                 opacity,
                 zIndex,
@@ -87,7 +75,7 @@ const Carousel: FC<CarouselProps> = ({
                 alt={`NFT ${i + 1}`}
                 width={380}
                 height={480}
-                className="rounded-xl w-40 md:w-96 shadow-lg transition-all duration-500 hover:shadow-xl"
+                className="rounded-xl w-48 sm:w-68 md:w-96 shadow-lg transition-all duration-500 hover:shadow-xl"
                 priority={absOffset < 2}
               />
             </div>
