@@ -14,12 +14,15 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { name: 'Bridge', href: '/bridge' },
-  { name: 'Gift Card / E Sim', href: '#' },
-  { name: 'Merch', href: '#' },
-  { name: 'Sell Phones', href: '#' },
-  { name: 'Cross Chain Mixer', href: '#' },
-  { name: 'Dao', href: '#' },
+  { name: 'Bridge', href: '/' },
+  { name: 'Gift Card / E Sim', href: 'https://esim.aintivirus.ai/' },
+  { name: 'Merch', href: 'https://store.aintivirus.ai/' },
+  { name: 'Sell Phones', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Cross Chain Mixer', href: 'https://mixer.aintivirus.ai/ ' },
+  {
+    name: 'Dao',
+    href: 'https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk ',
+  },
   { name: 'Blog', href: '#' },
 ];
 

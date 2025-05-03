@@ -7,7 +7,7 @@ import BridgeNftCollections from '@/ui/view/bridge/bridge-content/bridge-nft-col
 import BridgeIntro from '@/ui/view/bridge/bridge-content/bridge-intro';
 import FloatingChat from '@/ui/view/bridge/bridge-content/floating-chat';
 
-const BridgeContent: FC = () => {
+const HomeContent: FC = () => {
   return (
     <div className="flex flex-col gap-8 bg-radial from-25% from-[#080857] via-transparent to-transparent">
       <Navbar />
@@ -39,4 +39,4 @@ const BridgeContent: FC = () => {
   );
 };
 
-export default BridgeContent;
+export default HomeContent;
