@@ -6,6 +6,7 @@ import CoinMarketCapIcon from '@/ui/components/icons/coin-market-cap';
 import MediumIcon from '@/ui/components/icons/medium';
 import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
+import Link from 'next/link';
 
 const BridgeFooter: FC = () => {
   return (
@@ -25,27 +26,49 @@ const BridgeFooter: FC = () => {
             <span className="font-semibold">John McAfee</span>
           </p>
 
-          <div className="gap-3 mt-4 hidden lg:flex">
-            <TransparentButton className="p-2 aspect-square rounded-lg">
-              <YoutubeIcon />
-            </TransparentButton>
-            <TransparentButton className="p-2 aspect-square rounded-lg">
-              <CoinMarketCapIcon />
-            </TransparentButton>
-            <TransparentButton className="p-2 aspect-square rounded-lg">
-              <MediumIcon />
-            </TransparentButton>
-            <TransparentButton className="p-2 aspect-square rounded-lg">
-              <TwitterIcon />
-            </TransparentButton>
-            <TransparentButton className="p-2 aspect-square rounded-lg">
-              <SpotifyIcon />
-            </TransparentButton>
+          <div className="gap-3 mt-4 hidden md:flex">
+            <Link
+              className="contents"
+              href="https://www.youtube.com/@AIntivirusPodcast"
+            >
+              <TransparentButton className="w-12 h-12 rounded-lg">
+                <YoutubeIcon />
+              </TransparentButton>
+            </Link>
+            <Link
+              className="contents"
+              href="https://coinmarketcap.com/currencies/aintivirus/"
+            >
+              <TransparentButton className="w-12 h-12 rounded-lg">
+                <CoinMarketCapIcon />
+              </TransparentButton>
+            </Link>
+            <Link
+              className="contents"
+              href="https://medium.com/@AIntivirusPodcast"
+            >
+              <TransparentButton className="w-12 h-12 rounded-lg">
+                <MediumIcon />
+              </TransparentButton>
+            </Link>
+            <Link className="contents" href="https://x.com/officialmcafee">
+              <TransparentButton className="w-12 h-12 rounded-lg">
+                <TwitterIcon />
+              </TransparentButton>
+            </Link>
+            <Link
+              className="contents"
+              href="https://open.spotify.com/show/0vH2h9j4mIrPnvnYKbl9Po?si=6i-0wgfGQqCwlIp7eNIb_w"
+            >
+              <TransparentButton className="w-12 h-12 rounded-lg">
+                <SpotifyIcon />
+              </TransparentButton>
+            </Link>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row items-center space-x-8">
-          <div className="flex gap-3 mt-4 lg:hidden">
+        <div className="flex flex-col-reverse md:flex-row items-center space-x-8">
+          <div className="flex gap-3 mt-4 md:hidden">
             <TransparentButton className="p-2 aspect-square rounded-lg">
               <YoutubeIcon />
             </TransparentButton>
@@ -64,14 +87,34 @@ const BridgeFooter: FC = () => {
           </div>
 
           <div className="text-center md:text-left mb-8 md:mb-0 py-4">
-            <h3 className="text-cyan-400 font-semibold mb-2">Links</h3>
-            <ul className="lg:grid lg:grid-cols-2 flex flex-col gap-x-6 gap-y-1 text-gray-500 text-sm">
-              <li>Bridge</li>
-              <li>Sell Phones</li>
-              <li>Gift Card / E Sim</li>
-              <li>Cross Chain Mixer</li>
-              <li>Merch</li>
-              <li>Dao</li>
+            <ul className="md:grid md:grid-flow-col md:grid-rows-4 flex flex-col gap-x-6 gap-y-1 text-gray-500 text-sm">
+              <li>
+                <h3 className="text-cyan-400 font-semibold">Links</h3>
+              </li>
+              <li>
+                <Link href="https://aintivirus.ai/tradein">Bridge</Link>
+              </li>
+              <li>
+                <Link href="https://esim.aintivirus.ai/">
+                  Gift Card / E Sim
+                </Link>
+              </li>
+              <li>
+                <Link href="https://store.aintivirus.ai/">Merch</Link>
+              </li>
+              <li>
+                <Link href="https://aintivirus.ai/tradein">Sell Phones</Link>
+              </li>
+              <li>
+                <Link href="https://mixer.aintivirus.ai/">
+                  Cross Chain Mixer
+                </Link>
+              </li>
+              <li>
+                <Link href="https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk ">
+                  Dao
+                </Link>
+              </li>
               <li>Blog</li>
             </ul>
           </div>

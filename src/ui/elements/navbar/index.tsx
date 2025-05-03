@@ -40,7 +40,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="lg:hidden flex items-center y">
+          <div className="md:hidden flex items-center y">
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               className="text-xl focus:outline-none text-primary"
@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={`lg:flex lg:space-x-6 text-sm space-y-4 lg:space-y-0 absolute lg:static bg-black lg:bg-transparent w-full lg:w-auto transition-all duration-300 lg:flex-row ${
+            className={`md:flex md:space-x-6 text-sm space-y-4 md:space-y-0 absolute md:static bg-black md:bg-transparent w-full md:w-auto transition-all duration-300 md:flex-row ${
               isMobileMenuOpen ? 'top-16 left-0 p-4' : 'hidden'
             }`}
           >
@@ -74,7 +74,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="h-[100px] lg:h-[150px]" />
+      <div className="h-[100px] md:h-[150px]" />
     </>
   );
 };

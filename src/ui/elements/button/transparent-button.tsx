@@ -14,7 +14,7 @@ const TransparentButton: FC<TransparentCardProps> = ({
   return (
     <button
       className={cn(
-        'bg-gray-900/50 border border-[#1f2d53] shadow-md  p-4 text-white',
+        'bg-gray-900/50 border border-[#1f2d53] shadow-md place-items-center text-white',
         className
       )}
       {...props}

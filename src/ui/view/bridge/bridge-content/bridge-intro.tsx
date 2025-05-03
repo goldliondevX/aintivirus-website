@@ -6,7 +6,7 @@ import { ArrowRightIcon } from '@/ui/components/icons/arrow';
 
 const BridgeIntro: FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-16">
+    <div className="flex flex-col md:flex-row gap-16">
       <iframe
         width="560"
         height="315"
@@ -17,22 +17,22 @@ const BridgeIntro: FC = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       />
-      <div className="w-full md:w-1/2 space-y-4 lg:space-y-6">
-        <h1 className="text-2xl mx-auto lg:mx-0 w-fit lg:text-4xl">
+      <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+        <h1 className="text-2xl mx-auto md:mx-0 w-fit md:text-4xl">
           <span className="text-cyan-400 font-dotgothic">JOHN MCAFEE</span>{' '}
           <span className="text-white font-poppins">IS BACK</span>
         </h1>
 
-        <p className="text-gray-300 lg:text-lg text-sm leading-relaxed text-center lg:text-left !mt-0 lg:!mt-4">
+        <p className="text-gray-300 md:text-lg text-sm leading-relaxed text-center md:text-left !mt-0 md:!mt-4">
           Aintivirus is a crypto currency project, led by Janice McAfee, and a
           team of people that were close to John. We aim to promote the ideas of
           personal freedom, privacy, and crypto currency, while furthering the
           legacy of the man, the myth, and the legend that was John McAfee.
         </p>
 
-        <TransparentCard className="max-w-md font-dmsans flex flex-col items-center lg:items-start justify-between min-h-48 rounded-2xl">
+        <TransparentCard className="max-w-md font-dmsans flex flex-col items-center md:items-start justify-between min-h-48 rounded-2xl">
           <div className="space-y-2">
-            <h2 className="text-xl font-semibold text-primary text-center lg:text-left">
+            <h2 className="text-xl font-semibold text-primary text-center md:text-left">
               Contract Address:
             </h2>
 
@@ -58,7 +58,7 @@ const BridgeIntro: FC = () => {
             </div>
           </div>
 
-          <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center lg:items-start lg:items-center space-x-1 hover:bg-primary/50">
+          <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center md:items-start md:items-center space-x-1 hover:bg-primary/50">
             <span>Buy Now</span>
             <ArrowRightIcon />
           </button>
