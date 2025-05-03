@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-interface FloatingChatButtonProps extends HTMLAttributes<HTMLButtonElement> {}
+type FloatingChatButtonProps = HTMLAttributes<HTMLButtonElement>;
 
 const FloatingChatButton: FC<FloatingChatButtonProps> = ({ ...props }) => {
   return (

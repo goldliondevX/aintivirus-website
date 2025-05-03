@@ -25,7 +25,7 @@ const Carousel: FC<CarouselProps> = ({
     setCurrent(index);
   };
 
-  const { isMedium, isLarge, width } = useBreakpoints();
+  const { isMedium } = useBreakpoints();
 
   const maxOffset = Math.floor(visibleCount / 2);
 
