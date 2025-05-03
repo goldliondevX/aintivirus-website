@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import SolanaIcon from '@/ui/components/icons/solana';
 import EthereumIcon from '@/ui/components/icons/ethereum';
 import { ArrowRightIcon } from '@/ui/components/icons/arrow';
-import Link from 'next/link';
 
 const BridgeIntro: FC = () => {
   return (
