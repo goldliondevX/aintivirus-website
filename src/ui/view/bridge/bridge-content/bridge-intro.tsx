@@ -10,6 +10,7 @@ const BridgeIntro: FC = () => {
       <iframe
         width="560"
         height="315"
+        className="w-full md:w-1/2"
         src="https://www.youtube.com/embed/d620AmSkbOI?si=OMTMzxszIXVWS6AU"
         title="YouTube video player"
         frameBorder="0"
@@ -17,7 +18,7 @@ const BridgeIntro: FC = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       />
-      <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+      <div className="w-full md:w-1/2 space-y-4 place-items-center md:place-items-start md:space-y-6">
         <h1 className="text-2xl mx-auto md:mx-0 w-fit md:text-4xl">
           <span className="text-cyan-400 font-dotgothic">JOHN MCAFEE</span>{' '}
           <span className="text-white font-poppins">IS BACK</span>

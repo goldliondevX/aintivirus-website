@@ -2,12 +2,12 @@
 import { FC } from 'react';
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import Carousel from '@/ui/elements/carousel';
-import useMobile from '@/hooks/use-mobile';
+import useBreakpoints from '@/hooks/use-breakpoints';
 
 const BridgeNftCollections: FC = () => {
-  const { isMobile } = useMobile();
+  const { isLarge } = useBreakpoints();
 
-  const carouselVisibleCount = isMobile ? 3 : 5;
+  const carouselVisibleCount = !isLarge ? 3 : 5;
 
   return (
     <div className="w-full gap-2 h-full pt-16 flex flex-col relative items-center">
@@ -15,7 +15,7 @@ const BridgeNftCollections: FC = () => {
         Aintivirus Artwork
       </TransparentCard>
 
-      <h2 className="text-4xl md:text-5xl font-light space-x-2">
+      <h2 className="text-4xl text-center md:text-5xl font-light space-x-2">
         <span className="font-dotgothic text-primary tracking-wider">
           AINTIVIRUS
         </span>
