@@ -12,7 +12,7 @@ const BridgeNftCollections: FC = () => {
   return (
     <div className="w-full gap-2 h-full pt-16 flex flex-col relative items-center">
       <TransparentCard className="text-primary w-fit rounded-full py-1 font-bold px-4">
-        Antivirus Artwork
+        Aintivirus Artwork
       </TransparentCard>
 
       <h2 className="text-4xl md:text-5xl font-light space-x-2">

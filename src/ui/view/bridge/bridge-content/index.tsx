@@ -15,7 +15,7 @@ const BridgeContent: FC = () => {
           <p className="contents font-dotgothic text-primary lg:text-5xl">
             AINTIVIRUS
           </p>
-          <p className="contents font-poppins pt-2 px-1">&nbsp; -&nbsp;</p>
+          <p className="contents font-poppins pt-2 px-1">&nbsp;-&nbsp;</p>
           <p className="contents font-poppins pt-2">THE SECOND COMING OF&nbsp;</p>
           <p className="contents font-dotgothic text-primary lg:text-5xl">
             JOHN MCAFEE

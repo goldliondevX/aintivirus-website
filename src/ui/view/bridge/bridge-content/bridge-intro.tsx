@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import TransparentCard from '@/ui/elements/card/transparent-card';
-import Image from 'next/image';
 import SolanaIcon from '@/ui/components/icons/solana';
 import EthereumIcon from '@/ui/components/icons/ethereum';
 import { ArrowRightIcon } from '@/ui/components/icons/arrow';
@@ -8,13 +7,15 @@ import { ArrowRightIcon } from '@/ui/components/icons/arrow';
 const BridgeIntro: FC = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-16">
-      <Image
-        className="w-full  lg:w-1/2 object-cover"
-        src="/images/screen.png"
-        alt="screen"
-        layout="intrinsic"
-        width={500}
-        height={50}
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/d620AmSkbOI?si=OMTMzxszIXVWS6AU"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       />
       <div className="w-full md:w-1/2 space-y-4 lg:space-y-6">
         <h1 className="text-2xl mx-auto lg:mx-0 w-fit lg:text-4xl">

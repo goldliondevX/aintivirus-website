@@ -78,7 +78,7 @@ const BridgeFooter: FC = () => {
 
           <div>
             <Image
-              src="/images/grid-brand.png"
+              src="/images/mcafee-grid.png"
               alt="John McAfee NFT Grid"
               width={300}
               height={300}
@@ -88,7 +88,7 @@ const BridgeFooter: FC = () => {
         </div>
       </div>
       <div className="mt-10 border-t border-white/10 pt-4 text-sm text-center text-white/50">
-        Copyright ©2025 <span className="font-semibold">Antivirus</span>. All
+        Copyright ©2025 <span className="font-semibold">Aintivirus</span>. All
         rights reserved
       </div>
     </footer>
