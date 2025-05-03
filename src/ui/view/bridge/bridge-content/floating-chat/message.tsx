@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+
 import { MessageType } from '@/ui/view/bridge/bridge-content/floating-chat/index';
 import { cn } from '@/utils/style-utils';
 

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import SolanaIcon from '@/ui/components/icons/solana';
 import EthereumIcon from '@/ui/components/icons/ethereum';

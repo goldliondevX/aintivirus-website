@@ -1,5 +1,6 @@
-import Svg, { SvgProp } from '@/ui/components/svg';
 import { FC } from 'react';
+
+import Svg, { SvgProp } from '@/ui/components/svg';
 
 const SolanaIcon: FC<SvgProp> = ({ ...props }) => {
   return (

@@ -12,5 +12,4 @@ const ContentLayout: FC<ContentLayoutProps> = ({ children }) => {
   );
 };
 
-
 export default ContentLayout;

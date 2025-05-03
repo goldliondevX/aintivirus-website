@@ -1,11 +1,12 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/utils/style-utils';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
+import { cn } from '@/utils/style-utils';
 import MenuIcon from '@/ui/components/icons/menu';
 import CloseIcon from '@/ui/components/icons/close';
-import { usePathname } from 'next/navigation';
 
 interface MenuItem {
   name: string;

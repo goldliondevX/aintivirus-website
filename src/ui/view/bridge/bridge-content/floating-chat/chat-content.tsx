@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+
 import CloseIcon from '@/ui/components/icons/close';
 import Message from '@/ui/view/bridge/bridge-content/floating-chat/message';
 import SmileIcon from '@/ui/components/icons/smile';

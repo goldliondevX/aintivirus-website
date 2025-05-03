@@ -1,8 +1,9 @@
 'use client';
 import { FC, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import FloatingChatButton from '@/ui/view/bridge/bridge-content/floating-chat/floating-chat-button';
 import ChatContent from '@/ui/view/bridge/bridge-content/floating-chat/chat-content';
-import { AnimatePresence, motion } from 'framer-motion';
 
 export type MessageType = {
   id: number;

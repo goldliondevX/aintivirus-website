@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import YoutubeIcon from '@/ui/components/icons/youtube';
 import TransparentButton from '@/ui/elements/button/transparent-button';
 import CoinMarketCapIcon from '@/ui/components/icons/coin-market-cap';
 import MediumIcon from '@/ui/components/icons/medium';
 import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
-import Link from 'next/link';
 
 const BridgeFooter: FC = () => {
   return (

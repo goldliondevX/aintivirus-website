@@ -1,7 +1,8 @@
 'use client';
 import { FC, useState } from 'react';
-import { cn } from '@/utils/style-utils';
 import Image from 'next/image';
+
+import { cn } from '@/utils/style-utils';
 import useBreakpoints from '@/hooks/use-breakpoints';
 
 const VISIBLE_COUNT = 5;
@@ -49,9 +50,9 @@ const Carousel: FC<CarouselProps> = ({
           const zIndex = 20 - absOffset;
           const opacity = 1 - absOffset * 0.2;
           const scale = 1 - absOffset * 0.1;
-          const leftOffset = offset * (!isMedium ? 120 : 180) - (!isMedium ? 110 : 200);
+          const leftOffset =
+            offset * (!isMedium ? 120 : 180) - (!isMedium ? 110 : 200);
           const topOffset = absOffset * (!isMedium ? 60 : 130);
-
 
           return (
             <div
@@ -63,7 +64,7 @@ const Carousel: FC<CarouselProps> = ({
                   'bg-black p-1 md:p-3 rounded-xl border-primary shadow-[0_0_20px_theme(colors.primary)]'
               )}
               style={{
-                left: "50%",
+                left: '50%',
                 transform: `translateX(${leftOffset}px) translateY(${topOffset}px) scale(${scale})`,
                 opacity,
                 zIndex,

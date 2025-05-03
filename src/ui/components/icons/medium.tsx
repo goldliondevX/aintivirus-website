@@ -1,5 +1,6 @@
-import Svg, { SvgProp } from '@/ui/components/svg';
 import { FC } from 'react';
+
+import Svg, { SvgProp } from '@/ui/components/svg';
 
 const MediumIcon: FC<SvgProp> = ({ ...props }) => {
   return (

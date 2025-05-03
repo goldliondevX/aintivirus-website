@@ -1,4 +1,5 @@
 import { FC, SVGAttributes } from 'react';
+
 import { cn } from '@/utils/style-utils';
 
 export interface SvgProp extends SVGAttributes<SVGElement> {

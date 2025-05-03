@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+
 import './globals.css';
 import { ReactNode } from 'react';
+
 import { cn } from '@/utils/style-utils';
 import { dmSans, dotGothic16, inter, poppins } from '@/lib/fonts';
 

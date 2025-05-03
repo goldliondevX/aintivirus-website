@@ -1,5 +1,6 @@
 'use client';
 import { FC } from 'react';
+
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import Carousel from '@/ui/elements/carousel';
 import useBreakpoints from '@/hooks/use-breakpoints';

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import TransparentCard from '@/ui/elements/card/transparent-card';
 
 const BridgeCards: FC = () => {

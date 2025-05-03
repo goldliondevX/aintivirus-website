@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import Navbar from '@/ui/elements/navbar';
 import BridgeFooter from '@/ui/view/bridge/bridge-content/bridge-footer';
 import BridgeCards from '@/ui/view/bridge/bridge-content/bridge-cards';
@@ -16,7 +17,9 @@ const BridgeContent: FC = () => {
             AINTIVIRUS
           </p>
           <p className="contents font-poppins pt-2 px-1">&nbsp;-&nbsp;</p>
-          <p className="contents font-poppins pt-2">THE SECOND COMING OF&nbsp;</p>
+          <p className="contents font-poppins pt-2">
+            THE SECOND COMING OF&nbsp;
+          </p>
           <p className="contents font-dotgothic text-primary md:text-5xl">
             JOHN MCAFEE
           </p>
