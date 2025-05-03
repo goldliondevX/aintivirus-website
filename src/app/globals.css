@@ -3,19 +3,12 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: black;
+    --foreground: #ededed;
 
     --content-width: 1115px;
 }
 
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: black;
-        --foreground: #ededed;
-    }
-}
 
 body {
     background: var(--background);
