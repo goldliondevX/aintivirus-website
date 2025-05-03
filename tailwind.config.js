@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         inter: ['var(--font-inter)'],
         dotgothic: ['var(--font-dot-gothic)'],

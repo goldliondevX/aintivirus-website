@@ -8,7 +8,7 @@ import FloatingChat from '@/ui/view/bridge/bridge-content/floating-chat';
 
 const BridgeContent: FC = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 bg-radial from-[#080857] via-transparent to-transparent">
       <Navbar />
       <div className="flex flex-col w-full items-center">
         <div className="flex items-center text-4.5xl gap-3">
