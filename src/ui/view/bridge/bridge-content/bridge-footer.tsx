@@ -26,7 +26,7 @@ const BridgeFooter: FC = () => {
   return (
     <footer className="w-full text-white py-10 px-6 sm:px-12">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center">
-        <div className="space-y-6 mb-8 lg:mb-0">
+        <div className="flex items-center flex-col lg:items-start space-y-6 mb-8 lg:mb-0">
           <Image
             src="/images/logo.png"
             alt="Aintivirus Logo"
@@ -35,7 +35,7 @@ const BridgeFooter: FC = () => {
             className="mb-2"
           />
 
-          <p className="font-xl font-dmsans max-w-72 lg:max-w-96 text-white/70">
+          <p className="font-xl font-dmsans max-w-72 lg:max-w-96 text-white/70 text-center lg:text-right">
             Promoting the ideas and legacy of{' '}
             <span className="font-semibold">John McAfee</span>
           </p>
