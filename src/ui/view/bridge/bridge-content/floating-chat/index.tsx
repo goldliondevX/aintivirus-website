@@ -8,7 +8,7 @@ import ChatContent from '@/ui/view/bridge/bridge-content/floating-chat/chat-cont
 export type MessageType = {
   id: number;
   text: string;
-  time: string;
+  time: string | number;
 };
 
 const FloatingChat: FC = () => {

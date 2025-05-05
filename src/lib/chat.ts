@@ -12,7 +12,6 @@ export async function sendMessageAction(
   message: string,
   userId: string
 ): Promise<string> {
-  console.log(message, userId);
   if (!message || !userId) return 'Missing message or user ID';
 
   try {
