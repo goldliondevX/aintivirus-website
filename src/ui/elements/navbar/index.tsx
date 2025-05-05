@@ -40,7 +40,8 @@ const Navbar = () => {
               alt="logo"
               layout="intrinsic"
               width={225}
-              height={150}
+              height={34}
+              className="h-[40px]"
             />
           </div>
 
