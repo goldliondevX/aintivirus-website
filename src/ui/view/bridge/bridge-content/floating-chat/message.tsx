@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { MessageType } from '@/ui/view/bridge/bridge-content/floating-chat/index';
 import { cn } from '@/utils/style-utils';
+import { formatTime } from '@/lib';
 
 interface MessageProps {
   message: MessageType;
@@ -53,7 +54,7 @@ const Message: FC<MessageProps> = ({ message, isSender }) => {
             isSender ? 'text-left ps-4' : 'text-right'
           )}
         >
-          {message.time}
+          {formatTime(message.time)}
         </div>
       </div>
     </div>

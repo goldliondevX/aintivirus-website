@@ -13,7 +13,7 @@ import { sendMessageAction } from '@/lib/chat';
 interface ChatMessage {
   id: number;
   text: string;
-  time: string;
+  time: number;
   sender: 'user' | 'assistant';
 }
 
@@ -23,7 +23,14 @@ interface ChatContentProps {
 
 const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
   const [input, setInput] = useState('');
-  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
+    {
+      id: Date.now(),
+      text: 'Hello! The internet is a jungle. Stay alert. Stay free. Let’s talk.',
+      time: Date.now(),
+      sender: 'assistant',
+    },
+  ]);
   const [loading, setLoading] = useState(false);
 
   const userId = useMemo(
@@ -37,7 +44,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
     const userMessage: ChatMessage = {
       id: Date.now(),
       text: input,
-      time: 'Just now',
+      time: Date.now(),
       sender: 'user',
     };
 
@@ -50,7 +57,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
       const assistantReply: ChatMessage = {
         id: Date.now() + 1,
         text: replyText,
-        time: 'Just now',
+        time: Date.now(),
         sender: 'assistant',
       };
       setChatMessages((prev) => [assistantReply, ...prev]);
