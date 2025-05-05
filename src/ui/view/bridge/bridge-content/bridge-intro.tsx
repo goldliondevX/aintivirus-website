@@ -46,6 +46,7 @@ const BridgeIntro: FC = () => {
                 –
                 <Link
                   href="https://solscan.io/account/BAezfVmia8UYLt4rst6PCU4dvL2i2qHzqn4wGhytpNJW"
+                  target="_blank"
                   className="ml-1 text-gray-300 break-all hover:text-primary transition-colors"
                 >
                   BAezfVmia8UYLt4rst6PCU4dvL2i2qHzqn4wGhytpNJW
@@ -59,6 +60,7 @@ const BridgeIntro: FC = () => {
                 <span className="text-primary font-medium">Ethereum</span> –
                 <Link
                   href="https://etherscan.io/address/0x686c5961370Db7F14F57f5a430e05DeaE64df504"
+                  target="_blank"
                   className="ml-1 text-gray-300 break-all hover:text-primary transition-colors"
                 >
                   0x686c5961370db7f14f57f5a430e05deae64df504
@@ -66,11 +68,15 @@ const BridgeIntro: FC = () => {
               </p>
             </div>
           </div>
-
-          <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center md:items-center space-x-1 hover:bg-primary/50">
-            <span>Buy Now</span>
-            <ArrowRightIcon />
-          </button>
+          <Link
+            href="https://raydium.io/swap/?inputMint=BAezfVmia8UYLt4rst6PCU4dvL2i2qHzqn4wGhytpNJW&outputMint=sol"
+            target="_blank"
+          >
+            <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center md:items-center space-x-1 hover:bg-primary/50">
+              <span>Buy Now</span>
+              <ArrowRightIcon />
+            </button>
+          </Link>
         </TransparentCard>
       </div>
     </div>

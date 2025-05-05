@@ -43,6 +43,7 @@ const BridgeFooter: FC = () => {
           <div className="gap-3 mt-4 hidden lg:flex">
             <Link
               className="contents"
+              target="_blank"
               href="https://www.youtube.com/@AIntivirusPodcast"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -51,6 +52,7 @@ const BridgeFooter: FC = () => {
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://coinmarketcap.com/currencies/aintivirus/"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -59,19 +61,25 @@ const BridgeFooter: FC = () => {
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://medium.com/@AIntivirusPodcast"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
                 <MediumIcon />
               </TransparentButton>
             </Link>
-            <Link className="contents" href="https://x.com/officialmcafee">
+            <Link
+              className="contents"
+              target="_blank"
+              href="https://x.com/officialmcafee"
+            >
               <TransparentButton className="w-12 h-12 rounded-lg">
                 <TwitterIcon />
               </TransparentButton>
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://open.spotify.com/show/0vH2h9j4mIrPnvnYKbl9Po?si=6i-0wgfGQqCwlIp7eNIb_w"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -85,6 +93,7 @@ const BridgeFooter: FC = () => {
           <div className="flex gap-3 mt-4 lg:hidden">
             <Link
               className="contents"
+              target="_blank"
               href="https://www.youtube.com/@AIntivirusPodcast"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -93,6 +102,7 @@ const BridgeFooter: FC = () => {
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://coinmarketcap.com/currencies/aintivirus/"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -101,19 +111,25 @@ const BridgeFooter: FC = () => {
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://medium.com/@AIntivirusPodcast"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
                 <MediumIcon />
               </TransparentButton>
             </Link>
-            <Link className="contents" href="https://x.com/officialmcafee">
+            <Link
+              className="contents"
+              target="_blank"
+              href="https://x.com/officialmcafee"
+            >
               <TransparentButton className="w-12 h-12 rounded-lg">
                 <TwitterIcon />
               </TransparentButton>
             </Link>
             <Link
               className="contents"
+              target="_blank"
               href="https://open.spotify.com/show/0vH2h9j4mIrPnvnYKbl9Po?si=6i-0wgfGQqCwlIp7eNIb_w"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
@@ -123,16 +139,18 @@ const BridgeFooter: FC = () => {
           </div>
 
           <div className="text-center lg:text-left mb-8 lg:mb-0 py-4 !ms-2">
-            <h3 className="text-cyan-400 font-semibold text-2xl lg:text-sm pb-5 lg:pb-3">
+            {/* <h3 className="text-cyan-400 font-semibold text-2xl lg:text-sm pb-5 lg:pb-3">
               Links
-            </h3>
+            </h3> */}
             <ul className="lg:grid lg:grid-flow-col lg:grid-rows-4 flex flex-col gap-x-6 gap-y-6 lg:gap-y-3 text-gray-500 text-lg lg:text-sm">
               {links.map((link, i) => (
                 <li
                   key={i}
                   className="hover:text-primary transition-colors whitespace-nowrap"
                 >
-                  <Link href={link.href}>{link.name}</Link>
+                  <Link href={link.href} target="_blank">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

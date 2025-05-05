@@ -16,7 +16,7 @@ const TransparentCard: FC<TransparentCardProps> = ({
   ...props
 }) => {
   return href ? (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <div
         className={cn(
           'bg-gray-900/50 border border-[#1f2d53] shadow-md  p-4 text-white',

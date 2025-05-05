@@ -62,6 +62,7 @@ const Navbar = () => {
               <li key={idx}>
                 <Link
                   href={item.href}
+                  target="_blank"
                   className={cn(
                     'hover:text-cyan-400 transition-colors',
                     pathname.includes(item.href) && 'text-cyan-400 font-bold'
@@ -86,6 +87,7 @@ const Navbar = () => {
             <li key={idx}>
               <Link
                 href={item.href}
+                target="_blank"
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   'hover:text-cyan-400 transition-colors',
