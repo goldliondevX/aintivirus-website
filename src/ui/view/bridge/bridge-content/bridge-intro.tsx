@@ -67,7 +67,7 @@ const BridgeIntro: FC = () => {
             </div>
           </div>
 
-          <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center md:items-start md:items-center space-x-1 hover:bg-primary/50">
+          <button className="mt-4 px-4 py-2 w-fit bg-primary transition-all text-black rounded-full font-semibold flex items-center md:items-center space-x-1 hover:bg-primary/50">
             <span>Buy Now</span>
             <ArrowRightIcon />
           </button>
