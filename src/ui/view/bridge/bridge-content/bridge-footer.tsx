@@ -10,11 +10,11 @@ import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
 
 const links = [
-  { name: 'Bridge', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Bridge', href: 'https://bridge.aintivirus.ai/' },
   { name: 'Gift Card / E Sim', href: 'https://esim.aintivirus.ai/' },
   { name: 'Merch', href: 'https://store.aintivirus.ai/' },
   { name: 'Sell Phones', href: 'https://aintivirus.ai/tradein' },
-  { name: 'Cross Chain Mixer', href: 'https://mixer.aintivirus.ai/' },
+  { name: 'Cross Chain Mixer', href: 'https://mix.aintivirus.ai' },
   {
     name: 'Dao',
     href: 'https://app.realms.today/dao/6wRxTDDWpkcsicS1PSi9vcgzsSK452Bx4Ds6fXDUHgDk',

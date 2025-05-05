@@ -4,6 +4,7 @@ import { FC } from 'react';
 import TransparentCard from '@/ui/elements/card/transparent-card';
 import Carousel from '@/ui/elements/carousel';
 import useBreakpoints from '@/hooks/use-breakpoints';
+import Link from 'next/link';
 
 const BridgeNftCollections: FC = () => {
   const { isLarge } = useBreakpoints();
@@ -39,7 +40,15 @@ const BridgeNftCollections: FC = () => {
 
       <p className="absolute bottom-14 text-gray-400 md:bottom-28 left-1/2 -translate-x-1/2 w-[90%] md:max-w-[22.5rem] mx-auto font-inter text-sm text-center mt-6">
         Save on fees, get access to a never before seen John McAfee pics and
-        videos, and more, with the AIntivirus NFTs!
+        videos, and more, with the{' '}
+        <Link
+          href="https://magiceden.io/marketplace/ainti_"
+          target="_blank"
+          className="underline"
+        >
+          AIntivirus NFTs
+        </Link>
+        !
       </p>
     </div>
   );
