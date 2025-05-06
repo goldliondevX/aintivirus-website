@@ -17,8 +17,10 @@ export async function sendMessageAction(
   try {
     // Create or reuse a thread
     let threadId = threadMap[userId];
+
     if (!threadId) {
       const thread = await openai.beta.threads.create();
+
       threadId = thread.id;
       threadMap[userId] = threadId;
     }
@@ -37,6 +39,7 @@ export async function sendMessageAction(
     // Poll run status until complete (simple version)
     let runStatus;
     let retries = 10;
+
     while (retries-- > 0) {
       runStatus = await openai.beta.threads.runs.retrieve(threadId, run.id);
       if (runStatus.status === 'completed') break;
@@ -51,10 +54,13 @@ export async function sendMessageAction(
     const reply =
       assistantMessage?.content.find((c) => c.type === 'text')?.text?.value ||
       'No response from assistant.';
+
     console.log(reply);
+
     return reply;
   } catch (err: any) {
     console.error('[OpenAI Error]', err);
+
     return 'Something went wrong.';
   }
 }

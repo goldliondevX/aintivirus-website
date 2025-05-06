@@ -18,7 +18,7 @@ interface ChatMessage {
 }
 
 interface ChatContentProps {
-  toggleModal: () => void;
+  toggleModal: () => any;
 }
 
 const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
@@ -39,7 +39,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
   );
 
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim()) return null;
 
     const userMessage: ChatMessage = {
       id: Date.now(),
@@ -60,12 +60,17 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
         time: Date.now(),
         sender: 'assistant',
       };
+
       setChatMessages((prev) => [assistantReply, ...prev]);
     } catch (error) {
       console.error('Chat error:', error);
+
+      return null;
     } finally {
       setLoading(false);
     }
+
+    return null;
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -126,7 +131,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
             <ImageIcon />
           </button>
           <button
-            onClick={sendMessage}
+            onClick={() => void sendMessage()}
             className="ml-2 p-2  aspect-square bg-primary rounded-full disabled:opacity-50"
             disabled={loading}
           >
