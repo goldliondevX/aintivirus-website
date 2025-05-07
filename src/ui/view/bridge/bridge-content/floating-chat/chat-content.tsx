@@ -79,7 +79,7 @@ const ChatContent: FC<ChatContentProps> = ({ toggleModal }) => {
 
   return (
     <div className="inset-0 rounded-xl flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="w-screen h-screen md:max-w-sm md:h-[40rem] flex flex-col bg-tertiary text-white rounded-lg overflow-hidden shadow-xl transform transition-all">
+      <div className="w-screen h-dvh md:max-w-sm md:h-[40rem] flex flex-col bg-tertiary text-white rounded-lg overflow-hidden shadow-xl transform transition-all">
         <div className="flex items-center justify-between p-4 border-b border-blue-800">
           <div className="flex items-center space-x-3">
             <div className="relative">
