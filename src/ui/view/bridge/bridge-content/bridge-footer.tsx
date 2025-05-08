@@ -8,6 +8,8 @@ import CoinMarketCapIcon from '@/ui/components/icons/coin-market-cap';
 import MediumIcon from '@/ui/components/icons/medium';
 import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
+import GithubIcon from '@/ui/components/icons/github';
+import TelegramIcon from '@/ui/components/icons/telegram';
 
 const links = [
   { name: 'Bridge', href: 'https://bridge.aintivirus.ai/' },
@@ -53,19 +55,19 @@ const BridgeFooter: FC = () => {
             <Link
               className="contents"
               target="_blank"
-              href="https://coinmarketcap.com/currencies/aintivirus/"
+              href="https://t.me/AIntivirus"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
-                <CoinMarketCapIcon />
+                <TelegramIcon />
               </TransparentButton>
             </Link>
             <Link
               className="contents"
               target="_blank"
-              href="https://medium.com/@AIntivirusPodcast"
+              href="http://github.com/aintivirus-AI"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
-                <MediumIcon />
+                <GithubIcon />
               </TransparentButton>
             </Link>
             <Link
@@ -103,19 +105,19 @@ const BridgeFooter: FC = () => {
             <Link
               className="contents"
               target="_blank"
-              href="https://coinmarketcap.com/currencies/aintivirus/"
+              href="https://t.me/AIntivirus"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
-                <CoinMarketCapIcon />
+                <TelegramIcon />
               </TransparentButton>
             </Link>
             <Link
               className="contents"
               target="_blank"
-              href="https://medium.com/@AIntivirusPodcast"
+              href="http://github.com/aintivirus-AI"
             >
               <TransparentButton className="w-12 h-12 rounded-lg">
-                <MediumIcon />
+                <GithubIcon />
               </TransparentButton>
             </Link>
             <Link
