@@ -17,7 +17,7 @@ const menuItems: MenuItem[] = [
   { name: 'Bridge', href: 'https://bridge.aintivirus.ai/' },
   { name: 'Gift Card / E Sim', href: 'https://esim.aintivirus.ai/' },
   { name: 'Merch', href: 'https://store.aintivirus.ai/' },
-  { name: 'Sell Phones', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Sell Phones', href: 'https://tradein.aintivirus.ai' },
   { name: 'Cross Chain Mixer', href: 'https://mix.aintivirus.ai' },
   {
     name: 'Dao',

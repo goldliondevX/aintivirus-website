@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 import YoutubeIcon from '@/ui/components/icons/youtube';
 import TransparentButton from '@/ui/elements/button/transparent-button';
-import CoinMarketCapIcon from '@/ui/components/icons/coin-market-cap';
-import MediumIcon from '@/ui/components/icons/medium';
 import TwitterIcon from '@/ui/components/icons/twitter';
 import SpotifyIcon from '@/ui/components/icons/spotify';
 import GithubIcon from '@/ui/components/icons/github';
@@ -15,7 +13,7 @@ const links = [
   { name: 'Bridge', href: 'https://bridge.aintivirus.ai/' },
   { name: 'Gift Card / E Sim', href: 'https://esim.aintivirus.ai/' },
   { name: 'Merch', href: 'https://store.aintivirus.ai/' },
-  { name: 'Sell Phones', href: 'https://aintivirus.ai/tradein' },
+  { name: 'Sell Phones', href: 'https://tradein.aintivirus.ai' },
   { name: 'Cross Chain Mixer', href: 'https://mix.aintivirus.ai' },
   {
     name: 'Dao',
